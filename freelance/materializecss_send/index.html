@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <div id="mainContainer" class="container-fluid">
+    <div class="row">
+
+      <ul class="tabs">
+        <li class="tab col s2 offset-s3"><a href="#user">User</a></li>
+        <li class="tab col s2"><a class="active" href="#minutes">Minutes</a></li>
+        <li class="tab col s2"><a href="#hours">Hours</a></li>
+      </ul>
+      <div id="user" class="col s12">
+        <form class="col s6 offset-s3">
+          <div class="input-field  ">
+            <input id="first_name" type="text"></input>
+            <label htmlFor="first_name">Your name</label>
+          </div>
+          <div class="input-field  ">
+            <p class="range-field">
+              <label htmlFor="duration">Duration</label>
+              <input type="range" id="duration" name="duration" min="0" max="60" value="20" />
+            </p>
+          </div>
+        </form>
+
+      </div>
+      <div id="minutes" class="row">
+        <form class="col s6 offset-s3">
+          <div class="row1">
+            <p>
+              <label>
+                <input class="with-gap" name="groupMin" type="radio" checked />
+                <span>Every minute</span>
+              </label>
+            </p>
+          </div>
+          <div class="row1" id="haha">
+            <p>
+              <label>
+                <input class="with-gap" name="groupMin" type="radio" />
+                <span>Every
+                  <a class="waves-effect waves-light btn blue-grey lighten-5 reg-btn">-</a>
+                  <input type="text" id="minutesEvery" name="minutesEvery" value="1" class="center-align" />
+                  <a class="waves-effect waves-light btn blue-grey lighten-5 reg-btn">+</a>
+                  minute(s) starting at minute
+                  <a class="waves-effect waves-light btn blue-grey lighten-5 reg-btn">-</a>
+                  <input type="text" id="minutesStart" name="minutesStart" value="0" class="center-align"  />
+                  <a class="waves-effect waves-light btn blue-grey lighten-5 reg-btn">+</a>
+
+                </span>
+              </label>
+            </p>
+          </div>
+          <div class="row1">
+            <p>
+              <label>
+                <input class="with-gap" name="groupMin" type="radio" />
+                <span>Specific minute (choose one or many)</span>
+              </label>
+            </p>
+          </div>
+          <div class="row1">
+            <p>
+              <label>
+                <input class="with-gap" name="groupMin" type="radio" />
+                <span>Every minute between
+                  <a class="waves-effect waves-light btn blue-grey lighten-5 reg-btn">-</a>
+                  <input type="text" id="minutesFrom" name="minutesFrom" value="0" class="center-align"  />
+                  <a class="waves-effect waves-light btn blue-grey lighten-5 reg-btn">+</a>
+                  and
+                  <a class="waves-effect waves-light btn blue-grey lighten-5 reg-btn">-</a>
+                  <input type="text" id="minutesTo" name="minutesTo" value="0" class="center-align"  />
+                  <a class="waves-effect waves-light btn blue-grey lighten-5 reg-btn">+</a>
+
+                </span> </label>
+            </p>
+          </div>
+
+        </form>
+      </div>
+      <div id="hours" class="row">
+
+      </div>
+
+    </div>
+    <div id="like_button_container"></div>
+  
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <!-- Load our React component. -->
+    <script>var exports = {};</script>
+ <!--   <script type="text/babel" src="https://unpkg.com/react-select@2.1.1/lib/index.js" crossorigin></script>   -->
+    
+    <script type="text/babel" src="js/like_button1.js"></script>  
+
+</body>
+
+</html>
